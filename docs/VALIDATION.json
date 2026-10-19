@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-19",
+  "status": "SYNTHETIC_WORLD64_AB_VERIFIED",
+  "original_sha256": "67dea3d44a5956cc4f57e9ecce91a64c9e7ee9cdfff0de52a65e4cae46f7ff20",
+  "candidate_sha256": "e5575fdeeeb4649432841f768d47f637a2ad34286eed11482d42601a85273ab6",
+  "changed_byte_count": 1,
+  "changed_file_offset": "0xA4E734",
+  "scope": "EarlyWorldInitialization",
+  "historical_workload_pbo_sha256": "6a254998f8929a677000d852862c0e40fb094b876bdc84e59ac7770a82abe941",
+  "historical_workload_distributed": false,
+  "generated_methods": 140000,
+  "all_method_results_checked": true,
+  "same_pbo_parameters_and_support_inputs": true,
+  "original": {
+    "world_compilation_failure": "Out of static buffer memory",
+    "timeout": true,
+    "forced_termination": true
+  },
+  "candidate": {
+    "world_log_used_kb": 42318,
+    "world_log_capacity_kb": 67108,
+    "elapsed_seconds": 61.116,
+    "native_exit_code": -1,
+    "explicit_success_markers": true,
+    "script_errors_or_dumps": false,
+    "timeout": false,
+    "forced_termination": false
+  },
+  "public_patcher_verification": {
+    "negative_tests_passed": 6,
+    "supported_original_generated_expected_candidate_hash": true
+  },
+  "operator_report": "Successful server startup and connection using an unmodified client; not independently recorded multiplayer validation",
+  "limitations": [
+    "Synthetic native test exits before full mission and used -noBE",
+    "No long-duration, persistence, security-system or full VM-encoding validation",
+    "Clients and other module capacities unchanged",
+    "Original publisher Authenticode signature does not match modified executable"
+  ]
+}
