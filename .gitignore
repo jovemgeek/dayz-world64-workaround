@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.exe
+*.dll
+*.pbo
+*.bisign
+*.bikey
+*.RPT
+*.log
+*.manifest.json
+test-artifacts/
+profiles/
+storage_*/
