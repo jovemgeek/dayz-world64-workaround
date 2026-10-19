@@ -1,5 +1,9 @@
 # DayZ World64 experimental workaround
 
+**Start here: [beginner guide in English](docs/QUICK_START.md) | [passo a passo em portugues](README.pt-BR.md).** The file-picker mode does not require terminal commands.
+
+**[Download ZIP](https://github.com/jovemgeek/dayz-world64-workaround/archive/refs/heads/main.zip)** → extract everything → install Python once → double-click `START-HERE.bat` (English) or `INICIAR-AQUI.bat` (Portuguese) → select your original server executable → choose an output folder. Then follow the guide to install the generated copy on your stopped server. The download contains our tools, not a pre-patched DayZ executable.
+
 A temporary, exact-build workaround for **`Out of static buffer memory` in the World script module** of the Windows x64 DayZ dedicated server. Related report: [DZG-837 — Static memory issues](https://report.bistudio.com/issues/DZG-837).
 
 The patch increases the server's World script arena from **32 MiB to 64 MiB**. It changes one byte in a separately generated executable copy. It does not remove the allocator's bounds checks. This is an experimental community workaround, not an official Bohemia Interactive fix or a general solution for every out-of-memory error.
@@ -21,6 +25,8 @@ The patch increases the server's World script arena from **32 MiB to 64 MiB**. I
 The hash, not the displayed version alone, determines compatibility. Linux, other builds, clients and the diagnostic executable are unsupported inputs.
 
 ## Create the patched copy
+
+The easiest option is the file-picker wizard in the [beginner guide](docs/QUICK_START.md). It calls the same hash-checked patcher below and creates a new folder without replacing your installed server. These commands are an alternative for administrators who prefer a terminal.
 
 Install Python 3.10 or newer. Download this repository using **Code → Download ZIP**, extract it, and open PowerShell in the extracted directory. Use paths appropriate to your installation:
 
@@ -92,5 +98,7 @@ These tests exercise refusal and file-preservation behavior without distributing
 If this investigation and temporary workaround help your server, optional donations are welcome through **PayPal: gabrielrszj@icloud.com**. Donations support the time spent investigating, testing and documenting the work. The source remains freely available; donations do not buy a safety guarantee, priority support or an official fix.
 
 ## License and attribution
+
+The [DayZ Server EULA](https://store.steampowered.com/eula/223350_eula_0) restricts redistribution and modification/reverse engineering. We have not obtained Bohemia's authorization for this workaround. Distributing only our patcher does not establish that its use is authorized under that license. This repository does not distribute the proprietary executable, and its MIT license does not override Bohemia's terms.
 
 Original scripts and documentation in this repository are provided under the [MIT License](LICENSE). That license does not grant rights to DayZ or any third-party binary or asset. DayZ belongs to its respective rights holders. This project is independent and is not endorsed by Bohemia Interactive. Analysis used PE inspection and bounded disassembly, not recovered original source code.
